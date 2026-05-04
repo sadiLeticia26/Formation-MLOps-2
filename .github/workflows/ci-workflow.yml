@@ -21,12 +21,12 @@ jobs:
         run:  pip install -r requirements_test.txt
       - name: Run Linter
         run: |
-        flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
+          flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
       - name: Run Vulture
         run: |
-        vuluture .
+          vuluture .
       - name: Run tests
         run: |
-        pytest
+          pytest
 
 
