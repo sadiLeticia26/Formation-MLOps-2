@@ -16,7 +16,7 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install flake8 pytest vuluture
+          pip install flake8 pytest vulture
           pip install -r requirements.txt
       - name: Install dev dependencies
         run:  pip install -r requirements_test.txt
@@ -25,7 +25,7 @@ jobs:
           flake8 .      
       - name: Run Vulture
         run: |
-          vuluture .
+          vulture .
       - name: Run tests
         run: |
           pytest
