@@ -28,4 +28,9 @@ jobs:
       # Add behave command
       - name: Run functionnal tests
         run: behave tests/test_functional/features
+      # Mesure de la qualité du code
+      - name: Qualite
+        run: |
+          python -m pytest --cov=formation_indus_ds_avancee/ tests/test_unit/ -vv -p no:warnings
+          ./tests/tests_pyramid.sh
 
