@@ -21,6 +21,5 @@ def monitor_with_io(predictions_folder: str, db_con_str: str, monitoring_table_n
 
 def monitor(latest_predictions: pd.DataFrame) -> pd.DataFrame:
     # Start filling function
-    monitoring_df = pd.DataFrame
-    # End filling function
+    monitoring_df = latest_predictions.groupby('predictions_time').agg({'predictions': 'mean'})
     return monitoring_df
